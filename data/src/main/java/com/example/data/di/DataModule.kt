@@ -1,7 +1,9 @@
-package com.example.giphytestapp.di
+package com.example.data.di
 
+import com.example.data.repository.GiphyApi
 import com.example.data.utilData.Constants
 import com.google.gson.Gson
+import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -23,6 +25,8 @@ class DataModule {
             .addInterceptor(loggingInterceptor)
             .build()
 
+    @Provides
+    fun provideGson(): Gson = GsonBuilder().create()
 
 
     @Singleton
@@ -34,6 +38,11 @@ class DataModule {
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build()
 
+
+
+    @Provides
+    fun provideRedditApi(retrofit: Retrofit): GiphyApi =
+        retrofit.create(GiphyApi::class.java)
 
 
 }
