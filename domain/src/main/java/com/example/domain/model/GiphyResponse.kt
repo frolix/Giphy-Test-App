@@ -1,8 +1,5 @@
-package com.example.data.model
+package com.example.domain.model
 
-import androidx.room.ColumnInfo
-import androidx.room.Entity
-import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
 data class GiphySearchResponse(
@@ -38,23 +35,23 @@ class GiphyImage(
 )
 
 //FOR ROOM
-@Entity
-data class GiphyEntity(
-    @PrimaryKey
-    val id: String = "-1",
-    @ColumnInfo(name = "title")
-    val title: String = "",
-    @ColumnInfo(name = "preview_image_url")
-    val previewImageUrl: String = "",
-    @ColumnInfo(name = "original_image_url")
-    val originalImageUrl: String = ""
-)
-
-fun GiphyItem.toGiphyEntity():GiphyEntity{
-    return GiphyEntity(
-        this.id,
-        this.title.toString(),
-        this.images.previewGif.url,
-        this.images.original.url
-    )
-}
+//@Entity
+//data class GiphyEntity(
+//    @PrimaryKey
+//    val id: String = "-1",
+//    @ColumnInfo(name = "title")
+//    val title: String = "",
+//    @ColumnInfo(name = "preview_image_url")
+//    val previewImageUrl: String = "",
+//    @ColumnInfo(name = "original_image_url")
+//    val originalImageUrl: String = ""
+//)
+//
+//fun GiphyItem.toGiphyEntity():GiphyEntity{
+//    return GiphyEntity(
+//        this.id,
+//        this.title.toString(),
+//        this.images.previewGif.url,
+//        this.images.original.url
+//    )
+//}

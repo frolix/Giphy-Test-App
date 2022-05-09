@@ -1,7 +1,6 @@
 package com.example.data.repository
 
-import com.example.data.model.GiphyTreadingResponse
-import com.example.data.model.GiphySearchResponse
+import com.example.domain.model.GiphyTreadingResponse
 import com.example.data.utilData.Constants
 import retrofit2.Response
 import retrofit2.http.GET

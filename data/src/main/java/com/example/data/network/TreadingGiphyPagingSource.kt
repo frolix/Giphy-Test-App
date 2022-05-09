@@ -3,7 +3,7 @@ package com.example.data.network
 import android.util.Log
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import com.example.data.model.GiphyItem
+import com.example.domain.model.GiphyItem
 import com.example.data.repository.GiphyApi
 import retrofit2.HttpException
 import javax.inject.Inject
