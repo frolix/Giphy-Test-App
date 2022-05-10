@@ -41,8 +41,10 @@ class DataModule {
 
 
     @Provides
-    fun provideRedditApi(retrofit: Retrofit): GiphyApi =
+    fun provideGiphyApi(retrofit: Retrofit): GiphyApi =
         retrofit.create(GiphyApi::class.java)
+
+
 
 
 }

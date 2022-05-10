@@ -12,7 +12,15 @@ interface GiphyApi {
     suspend fun getTrendingGiphy(
         @Query("api_key") apiKey: String = Constants.API_KEY,
         @Query("limit") limit:Int= Constants.LIMIT,
-        @Query("q") query: String?,
+//        @Query("q") query: String?,
+        @Query("offset") offset:Int= 0
+    ): Response<GiphyTreadingResponse>
+
+    @GET("search")
+    suspend fun getSearchGiphy(
+        @Query("api_key") apiKey: String = Constants.API_KEY,
+        @Query("limit") limit:Int= Constants.LIMIT,
+        @Query("q") searchValue: String?,
         @Query("offset") offset:Int= 0
     ): Response<GiphyTreadingResponse>
 

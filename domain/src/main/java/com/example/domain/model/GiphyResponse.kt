@@ -11,7 +11,7 @@ data class GiphyTreadingResponse(
     @SerializedName("pagination") var pagination: Pagination
 )
 
-class GiphyItem(
+data class GiphyItem(
     @SerializedName("id") val id: String,
     @SerializedName("title") val title: String?,
     @SerializedName("images") val images: GiphyImages

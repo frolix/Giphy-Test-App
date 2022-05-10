@@ -6,6 +6,6 @@ import kotlinx.coroutines.flow.Flow
 
 interface GiphyRepository {
 
-    fun getGiphy(): Flow<PagingData<GiphyItem>>
+     fun getGiphy(query: String): Flow<PagingData<GiphyItem>>
 
 }

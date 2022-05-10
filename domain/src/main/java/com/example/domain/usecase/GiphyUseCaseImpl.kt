@@ -6,10 +6,10 @@ import com.example.domain.repository.GiphyRepository
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
-internal class GiphyUseCaseImpl @Inject constructor(private val giphyRepository: GiphyRepository) :
+class GiphyUseCaseImpl @Inject constructor(private val giphyRepository: GiphyRepository) :
     GiphyUseCase {
-    override suspend fun execute(): Flow<PagingData<GiphyItem>> {
-        return giphyRepository.getGiphy()
+    override fun execute(quaery: String): Flow<PagingData<GiphyItem>> {
+        return giphyRepository.getGiphy(quaery)
     }
 
 }
