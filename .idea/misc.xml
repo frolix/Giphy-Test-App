@@ -5,7 +5,15 @@
       <map>
         <entry key="..\:/Users/frolix/AndroidStudioProjects/GiphyTestApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1165" />
         <entry key="..\:/Users/frolix/AndroidStudioProjects/GiphyTestApp/app/src/main/res/layout/activity_main.xml" value="0.13489583333333333" />
+        <entry key="..\:/Users/frolix/AndroidStudioProjects/GiphyTestApp/app/src/main/res/layout/fragment_favorite_giphy.xml" value="0.24739583333333334" />
+        <entry key="..\:/Users/frolix/AndroidStudioProjects/GiphyTestApp/app/src/main/res/layout/fragment_giphy.xml" value="0.2" />
+        <entry key="..\:/Users/frolix/AndroidStudioProjects/GiphyTestApp/app/src/main/res/layout/fragment_view_giphy.xml" value="0.2" />
         <entry key="..\:/Users/frolix/AndroidStudioProjects/GiphyTestApp/app/src/main/res/layout/item_giphy_list.xml" value="0.264" />
+        <entry key="..\:/Users/frolix/AndroidStudioProjects/GiphyTestApp/app/src/main/res/layout/item_simple.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/frolix/AndroidStudioProjects/GiphyTestApp/app/src/main/res/layout/item_trending_giphy.xml" value="0.2" />
+        <entry key="..\:/Users/frolix/AndroidStudioProjects/GiphyTestApp/app/src/main/res/layout/spinner_list.xml" value="0.253125" />
+        <entry key="..\:/Users/frolix/AndroidStudioProjects/GiphyTestApp/app/src/main/res/menu/main_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/frolix/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/simple_spinner_item.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>

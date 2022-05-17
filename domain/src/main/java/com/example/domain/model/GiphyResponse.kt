@@ -1,5 +1,7 @@
 package com.example.domain.model
 
+import android.os.Parcel
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 
 data class GiphySearchResponse(
@@ -12,10 +14,35 @@ data class GiphyTreadingResponse(
 )
 
 data class GiphyItem(
-    @SerializedName("id") val id: String,
+    @SerializedName("id") val id: String?,
     @SerializedName("title") val title: String?,
     @SerializedName("images") val images: GiphyImages
-)
+):Parcelable {
+    constructor(parcel: Parcel) : this(
+        parcel.readString(),
+        parcel.readString(),
+        TODO("images")
+    )
+
+    override fun writeToParcel(parcel: Parcel, flags: Int) {
+        parcel.writeString(id)
+        parcel.writeString(title)
+    }
+
+    override fun describeContents(): Int {
+        return 0
+    }
+
+    companion object CREATOR : Parcelable.Creator<GiphyItem> {
+        override fun createFromParcel(parcel: Parcel): GiphyItem {
+            return GiphyItem(parcel)
+        }
+
+        override fun newArray(size: Int): Array<GiphyItem?> {
+            return arrayOfNulls(size)
+        }
+    }
+}
 
 class Pagination(
     @SerializedName("total_count") val total_count: Int,
@@ -31,7 +58,8 @@ class GiphyImages(
 class GiphyImage(
     @SerializedName("height") val height: String,
     @SerializedName("url") val url: String = "",
-    @SerializedName("width") val width: String
+    @SerializedName("width") val width: String,
+    @SerializedName("size") val size: Int
 )
 
 //FOR ROOM
